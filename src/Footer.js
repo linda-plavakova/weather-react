@@ -11,7 +11,9 @@ export default function Footer() {
       <div className="git-link">
         <a
           href="https://github.com/lindaplavakova/weather-react"
-          className="git-link"
+          className="git-link" 
+          target="_blank"
+          rel="noreferrer"
         >
           Open-source code
           <br />
