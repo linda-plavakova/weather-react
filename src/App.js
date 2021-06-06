@@ -8,13 +8,11 @@ import Forecast from "./Forecast";
 import Footer from "./Footer";
 
 export default function App() {
+
   return (
     <div className="App">
       <Header />
       <City />
-      <Photo />
-      <Search />
-      <Current />
       <Forecast />
       <Footer />
     </div>
