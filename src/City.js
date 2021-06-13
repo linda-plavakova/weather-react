@@ -4,13 +4,16 @@ import axios from "axios";
 import Picture from "./Rain.jpg";
 
 export default function City() {
-  const [weatherData, setWeatherData] = useState[{}];
+  const [weatherData, setWeatherData] = useState({});
   const [ready, setReady] = useState(false);
   function handleResponse(response) {
     setWeatherData({
-    temperature: response.data.main.temp,
-    wind: 12,
+    temperature: Math.round(response.data.main.temp),
+    wind: Math.round(3.6*(response.data.wind.speed)),
     city: response.data.name,
+    description: response.data.weather[0].description,
+    humidity: response.data.main.humidity,
+
     });
     setReady(true); }
 
@@ -43,9 +46,9 @@ export default function City() {
 
       <span id="current-temp"> </span>
       <p>
-        <span id="condition"> Clear Sky </span> <br />
-        <span id="wind-speed">Wind: {weatherData.wind}km/h</span> <br />
-        <span id="humidity">Humidity: 80%</span> <br />
+        <span id="condition"> Condition: {weatherData.description} </span> <br />
+        <span id="wind-speed">Wind: {weatherData.wind} km/h</span> <br />
+        <span id="humidity">Humidity: {weatherData.humidity} %</span> <br />
       </p>
     </section>
 
