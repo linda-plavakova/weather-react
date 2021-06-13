@@ -10,7 +10,7 @@ export default function Footer() {
       </div>
       <div className="git-link">
         <a
-          href="https://github.com/linda-plavakova/weather-react/tree/Week-5"
+          href="https://github.com/linda-plavakova/weather-react/tree/Week-class"
           className="git-link" 
           target="_blank"
           rel="noreferrer"
